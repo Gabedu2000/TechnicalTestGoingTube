@@ -10,8 +10,8 @@ const TripSchema = new Schema({
     carPlate: {type: String, required: false},
     description: {type: String, required: false},
     baggages: {type: String, required: true},
-    quota: {type: Number, required: true},
-    cost: {type: Number, required: true}
+    quota: {type: String, required: true},
+    cost: {type: String, required: true}
 });
 
 module.exports = mongoose.model('Trip', TripSchema);

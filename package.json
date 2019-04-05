@@ -5,12 +5,14 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "webpack": "webpack --mode development --watch"
+    "webpack": "webpack --mode development --watch",
+    "start:debug": "node src/index.js --inspect"
   },
   "keywords": [],
   "author": "Gabriel",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.22",
     "morgan": "^1.9.1"

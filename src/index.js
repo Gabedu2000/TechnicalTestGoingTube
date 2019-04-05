@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const {mongoose} = require('./database');
 
@@ -9,7 +10,7 @@ const app = express();
 app.set('port',process.env.PORT || 3000);
 
 //Middlewares
-app.use(express.json());
+app.use(bodyParser.json());
 
 //Routes
 app.use('/api/trips',require('./routes/trips.routes.js'));

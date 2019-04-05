@@ -19,18 +19,19 @@ class App extends Component{
     }
 
     addTrip(e){    
-        console.log(this.state);
-        /*
-        fetch('/api/trip',{
+        console.log(JSON.stringify(this.state));
+        const copia = {
+            ...this.state,
+        };
+        
+        fetch('/api/trips/',{
             method: 'POST',
-            body: JSON.stringify(this.state),
-            Headers:{
-                'Accept': 'aplication/json',
-                'Content-Type': 'aplication/json'
+            body: JSON.stringify(copia),
+            headers:{
+                'Content-Type': 'application/json'
             }
         }).then(res =>console.log(res))
         .catch(err => console.error(err));
-        */
         e.preventDefault();
     }
 
